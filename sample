@@ -1,0 +1,9 @@
+FROM ubuntu
+LABEL MAINTAINER d@devops.com
+COPY sample.sh /code/sample.sh
+Copy testfile /code/testfile
+RUN chmod +x /code/sample.sh
+WORKDIR /code
+ENTRYPOINT ["sh","sample.sh"]
+CMD ["testfile"]
+#CMD sh sample.sh testfile
